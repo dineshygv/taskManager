@@ -1,0 +1,28 @@
+.item{
+	background-color: white;
+	border-radius: 3px;
+	padding: 7px;
+	font-size: 14px;
+	margin-top: 10px;
+	overflow:auto;
+	cursor: pointer;
+}
+
+.item:hover{
+	background-color: #edeff0;
+}
+
+.item-content{
+	width: 240px;
+	float: left;
+}
+
+.remove-item-container{
+	float:right;
+	display: inline-block;
+}
+
+
+.remove-item:hover{
+	color: red;
+}

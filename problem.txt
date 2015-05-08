@@ -1,0 +1,13 @@
+Implement Task Manager
+
+Using HTML/CSS/Javascript, implement a task manager with n number of lists (Ex:, Pending, On Hold, Doing, etc..)
+We should be able to add a list, add items to list, delete items from the list, edit item description.
+Drag and Drop of items between lists should be possible.
+Object Oriented JS Code is a plus.
+(Expecting the Task Manager to be something similar to trello.com)
+
+Some basic rules to keep in mind - 
+1. Code should work in multiple browsers(minimum IE7, FF and Chrome)
+2. Use native javascript. No javascript/CSS libraries are allowed. 
+3. Once done with the test, mail us back the files in zip format.
+4. Originality of code is very important!

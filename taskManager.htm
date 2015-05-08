@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<!-- styles -->
+		<link rel="stylesheet" type="text/css" href="Styles/common.css"></link>
+		<link rel="stylesheet" type="text/css" href="Styles/page.css"></link>
+		<link rel="stylesheet" type="text/css" href="Styles/list.css"></link>
+		<link rel="stylesheet" type="text/css" href="Styles/item.css"></link>
+		<link rel="stylesheet" type="text/css" href="Styles/edit.css"></link>
+	</head>
+	<body>
+		<div id="modal-blocker" style="display:none">
+			<div id="modal-dialog">
+				<div id="modal-title-container">
+					<div id="modal-title">
+						<span>Item details</span>
+					</div>
+					<div id="modal-close">
+						<span id="modal-close-button" class="remove-item">X</span>
+					</div>
+				</div>
+				<div id="modal-item-name" class="modal-container">
+					<input id="modal-title-input" type="textbox" placeholder="Enter name..."></input>
+				</div>
+				<div id="modal-item-desc" class="modal-container">
+					<textarea  id="modal-desc-input" rows="7" placeholder="Enter description..."></textarea>
+				</div>
+				<div id="modal-save" class="modal-container">
+					<button id="modal-save-button" type="button">Save</button>
+				</div>
+			</div>
+		</div>
+		<div id="header"><span>Task Manager</span></div>
+		<div id="content">			
+			<div id="add-list" class="list-type">
+				<span>Add a list...</span>
+			</div>
+			<div id="add-list-name" class="list-type" style="display:none">
+				<div id="list-name-container">
+					<input id="add-list-title" type="textbox" placeholder="Type list name..."></input>
+				</div>
+				<div id="add-list-submit">
+					<button id="save-list" type="button">Save</button>
+				</div>				
+			</div>			
+		</div>
+		
+		<!-- templates -->
+		<script id="listTemplate" type="text/x-custom-template">
+    		<div class="list list-type">
+				<div class="list-title">
+					<div class="list-title-name">
+						<span>{title}</span>
+					</div>	
+					<div class="list-title-remove">
+						<span class="remove-item">X</span>
+					</div>				
+				</div>
+				<div class="list-items">
+								
+				</div>
+				<div class="add-item">
+					<a href="#">Add an item...</a>
+				</div>				
+			</div>
+		</script>
+		
+		<script id="itemTemplate" type="text/x-custom-template">
+			<div class="item">
+				<div class="remove-item-container">
+					<span class="remove-item">X</span>
+				</div>
+				<div class="item-content">
+					<span class="item-content-title">{title}</span>
+				</div>											
+			</div>
+		</script>
+		
+		<!-- scripts -->
+		
+		<!-- services -->
+		<script src="Scripts/Services/dataService.js"></script>
+		
+		<!-- viewControllers -->
+		<script src="Scripts/ViewControllers/pageViewController.js"></script>
+		<script src="Scripts/ViewControllers/listViewController.js"></script>
+		<script src="Scripts/ViewControllers/itemViewController.js"></script>
+		<script src="Scripts/ViewControllers/modalViewController.js"></script>
+		
+		<!-- utilities -->
+		<script src="Scripts/Utils/domUtility.js"></script>
+		
+		<!-- controllers -->
+		<script src="Scripts/Controllers/pageController.js"></script>
+		
+		<script>
+			window.utils.setOnReady(function(){
+				var pageController = new window.controllers.pageController();
+				pageController.initializePage();
+			});
+		</script>
+	</body>
+</html>
