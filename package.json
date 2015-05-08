@@ -1,0 +1,29 @@
+{
+  "name": "TaskManagerGit",
+  "version": "1.0.0",
+  "description": "trello fork",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dineshygv/taskManager"
+  },
+  "keywords": [
+    "trello",
+    "node",
+    "azure"
+  ],
+  "author": "dineshygv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dineshygv/taskManager/issues"
+  },
+  "homepage": "https://github.com/dineshygv/taskManager"
+}
