@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 var fs = require("fs");
+var port = process.env.PORT || 1337;
 
 function sendFile(res, filePath){
 	fs.exists(__dirname + filePath, function(exists){
@@ -23,9 +24,6 @@ app.get("*", function(req, res){
 	sendFile(res, req.path);
 });
 
-var port = (process.argv.length > 2 && typeof process.argv[2] == "number") ? process.argv[2] : 3000;
 app.listen(port);
-
-console.log("File server listening on " + port + " with base path " + __dirname);
 
  
